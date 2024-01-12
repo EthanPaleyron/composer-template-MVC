@@ -1,0 +1,1096 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Arial, sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  background-color: rgba(88, 130, 213, 0.6);
+  display: flex;
+  flex-direction: row;
+}
+
+header {
+  width: 90px;
+  height: 100%;
+  position: fixed;
+}
+
+nav {
+  height: 100%;
+  background-color: #052659ff;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 0;
+}
+
+nav a {
+  display: block;
+  color: white;
+}
+
+nav > * {
+  margin: 10px 0;
+}
+
+nav a.logo {
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  padding: 5px;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 50px;
+}
+
+nav .icon {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 2px;
+}
+
+nav .hidden {
+  visibility: hidden;
+  opacity: 0;
+  background-color: black;
+  padding: 4px 7px;
+  border-radius: 10px;
+  transition: all 0.5s ease;
+}
+
+nav .hoverLink:hover .hidden {
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.5s ease;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 90px;
+}
+
+/* CSS Form Register */
+.formLogin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #013a6b;
+  color: white;
+  border-radius: 15px;
+}
+
+.formLogin h1 {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.formLogin .separateur {
+  border-top: 4px solid white;
+  border-radius: 100%;
+  width: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.formLogin form {
+  width: 100%;
+  margin: 25px 0;
+  padding: 0 50px;
+}
+
+.formLogin .blockInput {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.formLogin .labelInput {
+  display: flex;
+  flex-direction: row;
+}
+
+.formLogin .error {
+  color: red;
+  font-weight: bold;
+}
+
+.formLogin .labelInput label {
+  color: #052659ff;
+  padding: 0 8px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.formLogin .labelInput input {
+  display: flex;
+  color: #052659ff;
+  flex-grow: 1;
+  border: none;
+  padding: 8px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.formLogin .labelInput input::placeholder {
+  color: #052659ff;
+}
+
+.formLogin .labelInput input.inputPassword {
+  border-radius: 0;
+}
+
+.formLogin .labelInput .viewPassword {
+  background-color: white;
+  border: none;
+  color: #052659ff;
+  padding: 0 8px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.formLogin .labelInput .viewPassword > i {
+  font-size: 15px;
+}
+
+.formLogin .focus label {
+  color: white;
+  border-left: 1px solid white;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  background-color: #052659ff;
+}
+
+.formLogin .focus input {
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  border-right: 1px solid white;
+  color: white;
+  background-color: #052659ff;
+}
+
+.formLogin .focus input.inputPassword {
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  border-right: 0;
+}
+
+.formLogin .focus input::placeholder {
+  color: white;
+}
+
+.formLogin .focus .viewPassword {
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  border-right: 1px solid white;
+  color: white;
+  background-color: #052659ff;
+}
+
+.formLogin form > button {
+  background-color: white;
+  color: #052659ff;
+  border: 1px solid #052659ff;
+  border-radius: 15px;
+  cursor: pointer;
+  padding: 8px 13px;
+  transition: all 0.5s ease;
+}
+
+.formLogin form > button:hover,
+.formLogin form > button:focus {
+  background-color: #052659ff;
+  color: white;
+  border: 1px solid white;
+  transition: all 0.5s ease;
+}
+
+.formLogin .more {
+  width: 100%;
+  padding: 0 30px;
+  margin-bottom: 15px;
+}
+
+.formLogin .more a {
+  color: white;
+}
+
+/* CSS Form Register */
+.formRegister {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #013a6b;
+  color: white;
+  border-radius: 15px;
+}
+
+.formRegister h1 {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.formRegister .separateur {
+  border-top: 4px solid white;
+  border-radius: 100%;
+  width: 85%;
+}
+
+.formRegister form {
+  width: 100%;
+  margin: 25px 0;
+  padding: 0 50px;
+}
+
+.formRegister form .line {
+  display: flex;
+  justify-content: space-around;
+}
+
+.formRegister .blockInput {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.formRegister .labelInput {
+  display: flex;
+  flex-direction: row;
+}
+
+.formRegister .error {
+  color: red;
+  font-weight: bold;
+}
+
+.formRegister .labelInput label {
+  color: #052659ff;
+  padding: 0 8px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.formRegister .labelInput input {
+  display: flex;
+  color: #052659ff;
+  flex-grow: 1;
+  border: none;
+  padding: 8px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.formRegister .labelInput input::placeholder {
+  color: #052659ff;
+}
+
+.formRegister .labelInput input.inputPassword {
+  border-radius: 0;
+}
+
+.formRegister .labelInput .viewPassword {
+  background-color: white;
+  border: none;
+  color: #052659ff;
+  padding: 0 8px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.formRegister .labelInput .viewPassword > i {
+  font-size: 15px;
+}
+
+.formRegister .focus label {
+  color: white;
+  border-left: 1px solid white;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  background-color: #052659ff;
+}
+
+.formRegister .focus input {
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  border-right: 1px solid white;
+  color: white;
+  background-color: #052659ff;
+}
+
+.formRegister .focus input.inputPassword {
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  border-right: 0;
+}
+
+.formRegister .focus input::placeholder {
+  color: white;
+}
+
+.formRegister .focus .viewPassword {
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  border-right: 1px solid white;
+  color: white;
+  background-color: #052659ff;
+}
+
+.formRegister form > button {
+  background-color: white;
+  color: #052659ff;
+  border: 1px solid #052659ff;
+  border-radius: 15px;
+  cursor: pointer;
+  padding: 8px 13px;
+  transition: all 0.5s ease;
+}
+
+.formRegister form > button:hover,
+.formRegister form > button:focus {
+  background-color: #052659ff;
+  color: white;
+  border: 1px solid white;
+  transition: all 0.5s ease;
+}
+
+.formRegister .more {
+  width: 100%;
+  padding: 0 30px;
+  margin-bottom: 15px;
+}
+
+.formRegister .more a {
+  color: white;
+}
+
+/* CSS page ToDoList */
+section.dashboard {
+  padding: 50px 50px;
+  flex: 1;
+  height: 100%;
+}
+
+section.dashboard .topDashBoard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+section.dashboard .topDashBoard h1 {
+  color: #052659ff;
+  font-size: 40px;
+}
+
+section.dashboard .topDashBoard a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section.dashboard .topDashBoard a i {
+  border-radius: 100%;
+  font-size: 40px;
+  background-color: white;
+  color: #013a6b;
+  transition: all 0.5s ease;
+}
+
+section.dashboard .topDashBoard a:hover i {
+  background-color: #013a6b;
+  color: white;
+  font-size: 40px;
+  transition: all 0.5s ease;
+}
+
+section.dashboard .topDashBoard .buttonAdd {
+  background-color: #013a6b;
+  font-size: 40px;
+  /* border-radius: 100%; */
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+section.dashboard .topDashBoard .buttonAdd:hover {
+  color: #013a6b;
+  background-color: white;
+  transition: all 0.5s ease;
+}
+
+section.dashboard .blockAllList {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+section.dashboard .blockCard {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section.dashboard .card {
+  width: 250px;
+  background-color: #013a6b;
+  border-radius: 15px;
+}
+
+section.dashboard .card .top {
+  padding: 25px 25px 15px 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+section.dashboard .card .top > * {
+  color: white;
+  text-decoration: none;
+}
+
+section.dashboard .card .top i {
+  font-size: 20px;
+}
+
+section.dashboard .card .separateur {
+  border-top: 1px solid white;
+}
+
+section.dashboard .card .bottom {
+  padding: 15px 25px 25px 25px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  justify-content: space-between;
+}
+
+section.dashboard .card .bottom p {
+  margin: 5px 0px;
+}
+
+section.dashboard .card .bottom .check {
+  text-decoration: line-through;
+}
+
+/* CSS Homepage */
+
+section.homepage > * {
+  color: #052659ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section.homepage h1 {
+  font-size: 50px;
+  margin-bottom: 25px;
+}
+
+section.homepage p {
+  font-size: 20px;
+}
+
+/* CSS Form View List */
+.sectionView {
+  padding: 50px 50px;
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sectionView .modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.sectionView .modal > div {
+  background-color: #013a6b;
+  width: 50%;
+  padding: 25px;
+  border-radius: 15px;
+}
+
+.sectionView .modal > div p {
+  color: white;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.sectionView .modal > div > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.sectionView .modal > div > div > button {
+  background-color: white;
+  border: 1px solid #013a6b;
+  color: #013a6b;
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.sectionView .modal > div > div > button:hover {
+  background-color: #013a6b;
+  border: 1px solid white;
+  color: white;
+  transition: all 0.5s ease;
+}
+
+.sectionView .modal > div > div > form > button {
+  background-color: white;
+  border: 1px solid #013a6b;
+  color: #013a6b;
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.sectionView .modal > div > div > form > button:hover {
+  background-color: #013a6b;
+  border: 1px solid red;
+  color: white;
+  transition: all 0.5s ease;
+}
+
+.viewList {
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  background-color: #013a6b;
+  min-width: 40%;
+  height: 70%;
+  color: white;
+}
+
+.viewList > .top {
+  width: 100%;
+  height: 15%;
+  padding: 20px 20px 10px 20px;
+}
+
+.viewList #btnDeleteList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  color: red;
+  border-radius: 100%;
+  padding: 5px 10px;
+  transition: all 0.5s ease;
+}
+
+.viewList #btnDeleteList:hover {
+  background-color: #052659ff;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.viewList #btnDeleteTask {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  color: red;
+  border-radius: 100%;
+  padding: 5px 10px;
+  transition: all 0.5s ease;
+}
+
+.viewList #btnDeleteTask:hover {
+  background-color: #052659ff;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.viewList > .separateur {
+  border-top: 4px solid white;
+  width: 100%;
+}
+
+.viewList > .bottom {
+  width: 100%;
+  flex: 1;
+  max-height: calc(100% - (15% - 4px));
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.viewList > .bottom .check {
+  text-decoration: line-through;
+}
+
+.viewList > .bottom > .blockForm {
+  height: 15%;
+  display: flex;
+}
+
+.viewList > .bottom > .blockForm form {
+  height: 60%;
+  width: 100%;
+  display: flex;
+}
+
+.viewList > .bottom > .blockForm span {
+  margin-left: 10px;
+}
+
+.viewList > .bottom > .blockForm form input {
+  flex: 1;
+  background-color: transparent;
+  border: none;
+  padding: 5px 15px;
+  color: white;
+}
+
+.viewList > .bottom > .blockForm form .iconTask {
+  padding: 5px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.viewList > .bottom > .blockForm form button {
+  margin: 5px;
+  padding: 0 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 100%;
+  color: white;
+  background-color: transparent;
+  transition: background 0.5s ease;
+}
+
+.viewList > .bottom > .blockForm form button:hover {
+  background-color: #052659ff;
+  transition: background 0.5s ease;
+}
+
+.viewList > .bottom > .blockForm form input::placeholder {
+  color: white;
+}
+
+.viewList .blockTask {
+  overflow: auto;
+  max-height: 85%;
+}
+
+.viewList .task {
+  padding: 10px 20px 20px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.viewList .enleveTodolist {
+  display: flex;
+  justify-content: space-between;
+  min-height: 36px;
+}
+
+.viewList .enleveTodolist .showEdit {
+  position: relative;
+  display: flex;
+  flex-grow: 1;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.viewList .enleveTodolist .showEdit .nameTask {
+  font-size: 20px;
+  display: flex;
+  width: 100%;
+  align-items: flex-end;
+}
+
+.viewList .enleveTodolist .showEdit .hoverInfo {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  bottom: -25px;
+  padding: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  transition: all 0.5s ease;
+}
+
+.viewList .enleveTodolist .showEdit:hover .hoverInfo {
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.5s ease;
+}
+
+.viewList .btnCheckTrue {
+  border: none;
+  background-color: #013a6b;
+  padding: 7px;
+  border-radius: 100%;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.viewList .btnCheckTrue:hover {
+  background-color: green;
+  transition: all 0.5s ease;
+  border-radius: 100%;
+  transition: all 0.5s ease;
+}
+
+.viewList .btnCheckTrue i {
+  font-size: 20px;
+  color: green;
+  transition: all 0.5s ease;
+}
+
+.viewList .btnCheckTrue:hover i {
+  color: white;
+  transition: all 0.5s ease;
+}
+
+.viewList .btnCheckFalse {
+  border: none;
+  background-color: #013a6b;
+  padding: 7px 10px;
+  border-radius: 100%;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.viewList .btnCheckFalse:hover {
+  background-color: red;
+  transition: all 0.5s ease;
+  border-radius: 100%;
+  transition: all 0.5s ease;
+}
+
+.viewList .btnCheckFalse i {
+  font-size: 20px;
+  color: red;
+  transition: all 0.5s ease;
+}
+
+.viewList .btnCheckFalse:hover i {
+  color: white;
+  transition: all 0.5s ease;
+}
+
+.viewList .error {
+  color: red;
+  font-weight: 900;
+  margin-top: 8px;
+}
+
+.viewList .afficheInput {
+  display: flex;
+  min-height: 36px;
+}
+
+.viewList .formEdit {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.viewList .formEdit .labelInput {
+  display: flex;
+  flex-grow: 1;
+}
+
+.viewList .formEdit .labelInput label {
+  color: white;
+  padding: 0 8px;
+  display: flex;
+  border-bottom: 1px solid white;
+  align-items: center;
+  justify-content: center;
+}
+
+.viewList .formEdit .labelInput input {
+  display: flex;
+  color: white;
+  border: none;
+  flex-grow: 1;
+  background-color: transparent;
+  border-bottom: 1px solid white;
+  padding: 8px;
+}
+
+.viewList .formEdit .labelInput input::placeholder {
+  color: white;
+}
+
+.viewList .formEdit .focus label {
+  color: white;
+  border-top-left-radius: 5px;
+  padding: 0 8px;
+  display: flex;
+  border-bottom: 1px solid white;
+  align-items: center;
+  background-color: #052659ff;
+  justify-content: center;
+}
+
+.viewList .formEdit .focus input {
+  display: flex;
+  color: white;
+  border: none;
+  flex-grow: 1;
+  background-color: #052659ff;
+  border-bottom: 1px solid white;
+  padding: 8px;
+}
+
+.viewList .formEdit .focus input::placeholder {
+  color: white;
+}
+
+.viewList .formEdit button {
+  border: none;
+  border-bottom: 1px solid white;
+  background-color: transparent;
+  width: 35px;
+  color: white;
+  border-top-right-radius: 5px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.viewList .formEdit button:hover {
+  background-color: rgba(38, 89, 255, 0.19);
+  transition: all 0.5s ease;
+}
+
+.viewList .formDelete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 15px;
+}
+
+.viewList .formDelete button {
+  background-color: transparent;
+  border-radius: 100%;
+  border: none;
+  padding: 5px;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.viewList .formDelete button:hover {
+  background-color: #052659ff;
+  transition: all 0.5s ease;
+}
+
+.viewList .formDelete button i {
+  font-size: 20px;
+  color: red;
+}
+
+.viewList .hiddenEdit {
+  display: none;
+}
+
+/* CSS create */
+section.create {
+  padding: 50px 50px;
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+section.create h1 {
+  font-size: 35px;
+}
+
+section.create > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+section.create .list {
+  min-width: 40%;
+  height: 70%;
+  border-radius: 15px;
+  background-color: #013a6b;
+  display: flex;
+  flex-direction: column;
+}
+
+section.create .list .top {
+  width: 100%;
+  padding: 20px 20px 10px 20px;
+}
+
+section.create form {
+  display: flex;
+  flex-direction: row;
+}
+
+section.create form input {
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  flex: 1;
+  margin-right: 10px;
+}
+
+section.create form input::placeholder {
+  color: white;
+}
+
+section.create form button {
+  padding: 10px 10px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  border-radius: 100%;
+  cursor: pointer;
+  transition: background 0.5s ease;
+}
+
+section.create form button:hover {
+  background-color: #052659ff;
+  transition: background 0.5s ease;
+}
+
+section.create .list .top .error {
+  color: red;
+}
+
+section.create .list .separateur {
+  border-top: 4px solid white;
+  width: 100%;
+}
+
+section.create .list .bottom {
+  width: 100%;
+  padding: 20px 20px 10px 20px;
+  flex-grow: 1;
+}
+
+/* CSS page 404 */
+
+section.error {
+  margin: 50px;
+}
+
+section.error h1 {
+  color: #052659ff;
+  font-size: 50px;
+}
+
+section.error a {
+  color: #052659ff;
+}
+
+@media screen and (max-width: 765px) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  header {
+    width: 100%;
+    height: 90px;
+  }
+
+  nav {
+    height: 90px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 30px;
+  }
+
+  nav a.logo {
+    background-color: black;
+    padding: 5px;
+    width: 60px;
+    height: 60px;
+    margin: 0;
+  }
+
+  nav .hoverLink {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 30px;
+  }
+
+  nav .hidden {
+    position: absolute;
+    bottom: -30px;
+  }
+
+  main {
+    margin-top: 90px;
+    margin-left: 0px;
+    padding-top: 50px;
+  }
+
+  * section {
+    padding: 0 !important;
+    margin: 25px;
+  }
+
+  section.create .list {
+    width: 80%;
+  }
+
+  .sectionView .modal > div {
+    width: 80%;
+  }
+}
