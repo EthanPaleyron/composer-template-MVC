@@ -6,7 +6,7 @@ require '../src/config/config.php';
 require '../vendor/autoload.php';
 require SRC . 'helper.php';
 
-$router = new Todo\Router($_SERVER["REQUEST_URI"]);
+$router = new Project\Router($_SERVER["REQUEST_URI"]);
 $router->get('/', "TodoController@index");
 $router->get('/login/', "UserController@showLogin");
 $router->get('/register/', "UserController@showRegister");
