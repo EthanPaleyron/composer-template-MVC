@@ -1,0 +1,10 @@
+@import "base";
+@import "styles";
+@import "design-tokens";
+
+h1 {
+  @extend %absolute-center;
+  background: gradient(red, blue, 90deg);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

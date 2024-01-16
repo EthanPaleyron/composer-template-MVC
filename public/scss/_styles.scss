@@ -1,0 +1,45 @@
+// 🔴Function
+@function generate-color($base-color, $percentage) {
+  @return mix(white, $base-color, $percentage);
+}
+@function gradient($color1, $color2, $direction) {
+  @return linear-gradient($direction, $color1, $color2);
+}
+
+// 🔴Placeholder Selectors
+%flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+%button {
+  padding: 0.8rem 1.8rem;
+  border-radius: 3rem;
+}
+%ellipsis {
+  white-space: nowrap;
+  overflow: auto;
+  text-overflow: ellipsis;
+}
+%absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// 🔴Mixin
+@mixin bg-pattem($url, $p) {
+  background-image: $url;
+  background-position: $p;
+}
+@mixin grid($columns, $gap) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  gap: $gap;
+}
+@mixin responsive($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}

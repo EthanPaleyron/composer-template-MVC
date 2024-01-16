@@ -1,16 +1,16 @@
 {
-    "name": "ethan/composer-template-mvc",
-    "description": "my template MVC",
-    "autoload": {
-        "psr-4": {
-            "Ethan\\ComposerTemplateMvc\\": "src/"
-        }
-    },
-    "authors": [
-        {
-            "name": "Ethan",
-            "email": "epaleyron@edenschool.fr"
-        }
-    ],
-    "require": {}
+  "name": "ethan/composer-template-mvc",
+  "description": "my template MVC",
+  "autoload": {
+    "psr-4": {
+      "Project\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Ethan",
+      "email": "epaleyron@edenschool.fr"
+    }
+  ],
+  "require": {}
 }

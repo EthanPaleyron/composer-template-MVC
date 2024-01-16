@@ -1,18 +1,22 @@
 <?php
 
-function error($field) {
-    return isset($_SESSION["error"][$field]) ? $_SESSION["error"][$field]: "";
+function error($field)
+{
+    return isset($_SESSION["error"][$field]) ? $_SESSION["error"][$field] : "";
 }
 
-function old($field) {
+function old($field)
+{
     return isset($_SESSION["old"][$field]) ? $_SESSION["old"][$field] : "";
 }
 
-function escape($data) {
+function escape($data)
+{
     return stripslashes(trim(htmlspecialchars($data)));
 }
 
-function slugify($str) {
+function slugify($str)
+{
     // replace non letter or digits by -
     $str = preg_replace('~[^\pL\d]+~u', '-', $str);
     // transliterate
@@ -30,3 +34,4 @@ function slugify($str) {
     }
     return $str;
 }
+?>

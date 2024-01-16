@@ -3,7 +3,8 @@
 namespace Todo;
 
 /** Class Validator **/
-class Validator {
+class Validator
+{
 
     private $data;
     private $errors = [];
@@ -38,23 +39,27 @@ class Validator {
         "confirm" => ""
     ];
 
-    public function __construct($data = []) {
+    public function __construct($data = [])
+    {
         $this->data = $data ?: $_POST;
     }
 
-    public function validate($array) {
+    public function validate($array)
+    {
         foreach ($array as $field => $rules) {
             $this->validateField($field, $rules);
         }
     }
 
-    public function validateField($field, $rules) {
+    public function validateField($field, $rules)
+    {
         foreach ($rules as $rule) {
             $this->validateRule($field, $rule);
         }
     }
 
-    public function validateRule($field, $rule) {
+    public function validateRule($field, $rule)
+    {
         $res = strrpos($rule, ":");
         if ($res == true) {
             $repRule = explode(":", $rule);
@@ -81,19 +86,20 @@ class Validator {
                     $this->errors = [$this->messages[$rule]];
                     $this->storeSession($field, $this->messages[$rule]);
                 }
-            }
-            elseif (!preg_match($this->rules[$rule], $this->data[$field])) {
+            } elseif (!preg_match($this->rules[$rule], $this->data[$field])) {
                 $this->errors = [$this->messages[$rule]];
                 $this->storeSession($field, $this->messages[$rule]);
             }
         }
     }
 
-    public function errors() {
+    public function errors()
+    {
         return $this->errors;
     }
 
-    public function storeSession($field, $error) {
+    public function storeSession($field, $error)
+    {
         if (!isset($_SESSION["error"][$field])) {
             $_SESSION["error"][$field] = $error;
         } else {
@@ -101,3 +107,4 @@ class Validator {
         }
     }
 }
+?>

@@ -1,0 +1,77 @@
+// 🔴font-family
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@600;700display=swap");
+body {
+  font-family: "Roboto", sans-serif;
+  // pour mettre le footer en bas de pages avec un flex 1
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  flex: 1;
+}
+
+// 🔴Colors
+$primary: #dedede;
+$secondary: #aaa;
+$tel: #01ff70;
+$mail: #2d95f9;
+$w: #fff;
+$g: #aaa;
+$b: #000;
+$wa: rgba(255, 255, 255, 0.5);
+$ba: rgba(0, 0, 0, 0.5);
+
+// 🔴Other-Colors
+// $red: #ff4136;
+// $orange: #ff851b;
+// $yellow: #ffdc00;
+// $olive: #3d9970;
+// $green: #2ecc40;
+// $lime: #01ff70;
+// $aqua: #7fdbff;
+// $tela: #39cccc;
+// $blue: #0074d9;
+// $navy: #001f3f;
+// $purple: #b10dc9;
+// $fuchsia: #f012be;
+// $maroon: #85144b;
+
+// 🔴Texts sizes
+body {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+}
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 3rem;
+}
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2rem;
+}
+h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+}
+@include responsive(768px) {
+  h1 {
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+  }
+}
+@include responsive(1040px) {
+  h1 {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+  h2 {
+    font-size: 2.6rem;
+    line-height: 2.6rem;
+  }
+}
