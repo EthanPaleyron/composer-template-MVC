@@ -34,4 +34,3 @@ function slugify($str)
     }
     return $str;
 }
-?>
