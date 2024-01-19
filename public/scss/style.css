@@ -97,6 +97,10 @@ button {
 }
 
 body {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
   font-size: 1rem;
   font-weight: 600;
 }
@@ -163,7 +167,6 @@ header nav .user {
 }
 
 body {
-  font-family: "Roboto", sans-serif;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
