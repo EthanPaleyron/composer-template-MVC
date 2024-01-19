@@ -21,9 +21,23 @@ composer install # install l'autoloader
 ```json
 "autoload": {
     "psr-4": {
-        "RootName\\": "src/"
+        "Project\\": "src/"
     }
 }
+```
+
+- In the `config.php` add the name of your DB
+
+```php
+define("SRC", '../src/');
+define("CONTROLLERS", '../src/Controllers/');
+define("MODELS", '../src/Models/');
+define("VIEWS", '../src/Views/');
+
+define('HOST', '127.0.0.1');
+define('DATABASE', 'NAME_DB'); // the name of your DB
+define('USER', 'root');
+define('PASSWORD', '');
 ```
 
 - Reset autoloader
@@ -39,5 +53,10 @@ cd .\public\
 ```
 
 ```shell
-composer dump-autoload
+php -S localhost:8000
 ```
+
+## SASS | SCSS
+
+- Install the **[live-sass]("https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass")** extension on **vscode**
+- And click on `watch sass`

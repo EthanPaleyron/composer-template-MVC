@@ -2,10 +2,23 @@
 @import "styles";
 @import "design-tokens";
 @import "404";
+@import "layout";
 
-h1 {
+body {
+  font-family: "Roboto", sans-serif;
+  // pour mettre le footer en bas de pages
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.title_page {
   @extend %absolute-center;
   background: gradient(red, blue, 90deg);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+footer {
+  flex: 1;
 }

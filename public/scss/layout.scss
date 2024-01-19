@@ -1,0 +1,21 @@
+header {
+  nav {
+    color: $w;
+    background-color: $secondary;
+    padding: 1.5rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    ul {
+      display: flex;
+      gap: 6rem;
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+    .user {
+      font-size: 1.2rem;
+      text-decoration: underline;
+    }
+  }
+}

@@ -2,7 +2,7 @@
 ob_start();
 ?>
 
-<section>
+<section class="error_404">
     <h1>Error 404</h1>
     <p>Search page does not exist ! <a href="/">Leave this page !</a></p>
 </section>
