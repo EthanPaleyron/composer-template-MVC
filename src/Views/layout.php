@@ -10,7 +10,7 @@
     <!-- <meta name="keywords" content="Keywords relevant to your project"> -->
     <!-- <meta name="author" content="Your name or the name of your organization"> -->
     <link rel="stylesheet" href="/scss/style.css">
-    <script src="https://kit.fontawesome.com/c1d0ab37d6.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/2621df78fc.js" crossorigin="anonymous"></script>
 </head>
 
 <body>

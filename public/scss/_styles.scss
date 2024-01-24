@@ -1,21 +1,15 @@
 // 🔴Function
-@function generate-color($base-color, $percentage) {
-  @return mix(white, $base-color, $percentage);
-}
 @function gradient($color1, $color2, $direction) {
   @return linear-gradient($direction, $color1, $color2);
 }
+@function darken-color($color, $amount) {
+  @return darken($color, $amount);
+}
+@function generate-color($base-color, $percentage) {
+  @return mix(white, $base-color, $percentage);
+}
 
 // 🔴Placeholder Selectors
-%flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-%button {
-  padding: 0.8rem 1.8rem;
-  border-radius: 3rem;
-}
 %ellipsis {
   white-space: nowrap;
   overflow: auto;

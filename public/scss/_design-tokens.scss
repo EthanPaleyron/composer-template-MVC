@@ -62,9 +62,10 @@ h3 {
 }
 
 // 🔴Buttons
+.link {
+  color: $link;
+}
 %button {
   padding: 0.8rem 1.8rem;
   border-radius: 3rem;
 }
-
-// 🔴Form
