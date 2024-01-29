@@ -8,22 +8,40 @@ class Validator
 
     private $data;
     private $errors = [];
+    // EN
     private $messages = [
-        "required" => "Le champ est requis !",
-        "min" => "Le champ doit contenir un minimum de %^% lettres !",
-        "max" => "Le champ doit contenir un maximum de %^% lettres !",
-        "regex" => "Le format n'est pas respecté",
-        "length" => "Le champ doit contenir %^% caractère(s) !",
-        "url" => "Le champ doit correspondre à une url !",
-        "email" => "Le champ doit correspondre à une email: exemple@gmail.com !",
-        "date" => "Le champ doit être une date !",
-        "alpha" => "Le champ peut contenir que des lettres minuscules et majuscules !",
-        "alphaNum" => "Le champ peut contenir que des lettres minuscules, majuscules et des chiffres !",
-        "alphaNumDash" => "Le champ peut contenir que des lettres minuscules, majuscules, des chiffres, des slash et des tirets !",
-        "alphaSpace" => "Le champ peut contenir que des lettres minuscules, majuscules, espace",
-        "numeric" => "Le champ peut contenir que des chiffres !",
-        "confirm" => "Le champs n'est pas conforme au confirm !"
+        "required" => "The field is required!",
+        "min" => "This field must contain less than %^% letters!",
+        "max" => "This field must contain a maximum of %^% letters!",
+        "length" => "This field must contain %^% characters!",
+        "regex" => "This format is not respected",
+        "url" => "This field must correspond to a url!",
+        "email" => "This field must correspond to an email: exemple@gmail.com!",
+        "date" => "This field must be a date!",
+        "alpha" => "This field can only contain uppercase and lowercase letters!",
+        "alphaNum" => "This field can only contain lowercase letters, uppercase letters and numbers!",
+        "alphaNumDash" => "This field can only contain lowercase letters, uppercase letters, numbers, slashes and hyphens!",
+        "alphaSpace" => "This field can contain only lowercase letters, uppercase letters, spaces.",
+        "numeric" => "This field can only contain numbers!",
+        "confirm" => "This field does not comply with confirmation!"
     ];
+    // FR
+    // private $messages = [
+    //     "required" => "Ce champ est requis!",
+    //     "min" => "Ce champ doit contenir moins de %^% lettres!",
+    //     "max" => "Ce champ doit contenir plus de %^% lettres!",
+    //     "length" => "Ce champ doit contenir %^% caractère(s)!",
+    //     "regex" => "Ce format n'est pas respecté",
+    //     "url" => "Ce champ doit correspondre à une url!",
+    //     "email" => "Ce champ doit correspondre à une email: exemple@gmail.com!",
+    //     "date" => "Ce champ doit être une date!",
+    //     "alpha" => "Ce champ peut contenir que des lettres minuscules et majuscules!",
+    //     "alphaNum" => "Ce champ peut contenir que des lettres minuscules, majuscules et des chiffres!",
+    //     "alphaNumDash" => "Ce champ peut contenir que des lettres minuscules, majuscules, des chiffres, des slashs et des tirets!",
+    //     "alphaSpace" => "Ce champ peut contenir que des lettres minuscules, majuscules, espace",
+    //     "numeric" => "Ce champ peut contenir que des chiffres!",
+    //     "confirm" => "Ce champs n'est pas conforme au confirm!"
+    // ];
     private $rules = [
         "required" => "#^.+$#",
         "min" => "#^.{ù,}$#",
@@ -109,4 +127,3 @@ class Validator
         }
     }
 }
-?>
