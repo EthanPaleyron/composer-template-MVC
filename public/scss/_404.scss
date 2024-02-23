@@ -1,6 +1,7 @@
 .error_404 {
   text-align: center;
-  @extend %flex-center;
+  display: flex;
+  justify-content: center;
   flex-direction: column;
   h1 {
     color: $error;

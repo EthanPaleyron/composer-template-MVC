@@ -8,7 +8,7 @@ require SRC . 'helper.php';
 
 $router = new Project\Router($_SERVER["REQUEST_URI"]);
 // HOMEPAGE
-$router->get('/', "UserController@index");
+$router->get('/', "ProjectController@index");
 
 // USER PAGE
 $router->get('/register/', "UserController@showRegister");

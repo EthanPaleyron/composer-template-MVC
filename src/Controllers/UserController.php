@@ -13,12 +13,9 @@ class UserController
         $this->manager = new UserManager();
         $this->validator = new Validator();
     }
-    public function index(): void
-    {
-        require VIEWS . 'index.php';
-    }
     public function showLogin(): void
     {
+        // Si l'utilisateur n'est pas connecter on le redirige sur l'homepage
         if (isset($_SESSION["user"]["username"])) {
             header("Location: /");
             die();
@@ -27,21 +24,12 @@ class UserController
     }
     public function showRegister(): void
     {
+        // Si l'utilisateur n'est pas connecter on le redirige sur l'homepage
         if (isset($_SESSION["user"]["username"])) {
             header("Location: /");
             die();
         }
         require VIEWS . 'Auth/register.php';
-    }
-    public function logout(): void
-    {
-        if (!isset($_SESSION["user"]["username"])) {
-            header("Location: /login");
-            die();
-        }
-        session_start();
-        session_destroy();
-        header('Location: /login');
     }
     public function register(): void
     {
@@ -52,8 +40,8 @@ class UserController
         $_SESSION['old'] = $_POST;
         if (!$this->validator->errors()) {
             $result = $this->manager->find($_POST["username"]);
-            if (empty($result)) {
-                // HACHE LE MOTS DE PASSE POUR PAS VOIR LE VRAI MOTS DE PASSE EN BDD
+            if (empty($result)) { // Si l'username existe deja en BDD
+                // hache le mots de passe pour pas voir le vrai mots de passe en bdd
                 $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
                 $this->manager->store($password);
 
@@ -62,7 +50,7 @@ class UserController
                     "username" => $_POST["username"]
                 ];
                 header("Location: /");
-            } else {
+            } else { // Sinon on affiche un message d'erreur
                 $_SESSION["error"]['username'] = "Le username choisi est déjà utilisé !";
                 header("Location: /register");
             }
@@ -79,18 +67,31 @@ class UserController
         $_SESSION['old'] = $_POST;
         if (!$this->validator->errors()) {
             $result = $this->manager->find($_POST["username"]);
-            if ($result && password_verify($_POST['password'], $result->getpassword())) {
+            if ($result && password_verify($_POST['password'], $result->getpassword())) { // Si l'username existe deja en BDD et que le password corespond au password enregistrer en BDD de l'user
+                // On enregistre sont nom et identifient en session
                 $_SESSION["user"] = [
                     "id" => $result->getid_user(),
                     "username" => $result->getusername(),
                 ];
                 header("Location: /");
-            } else {
+            } else { // Sinon on affiche un message d'erreur
                 $_SESSION["error"]['message'] = "Une erreur sur les identifiants";
                 header("Location: /login");
             }
         } else {
             header("Location: /login");
         }
+    }
+    public function logout(): void
+    {
+        // Si l'utilisateur n'est pas connecter on le redirige au login
+        if (!isset($_SESSION["user"]["username"])) {
+            header("Location: /login");
+            die();
+        }
+        // Sinon on efface sa session et redirige au login
+        session_start();
+        session_destroy();
+        header('Location: /login');
     }
 }

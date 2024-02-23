@@ -5,6 +5,6 @@ define("MODELS", '../src/Models/');
 define("VIEWS", '../src/Views/');
 
 define('HOST', '127.0.0.1');
-define('DATABASE', 'NAME_DB');
+define('DATABASE', 'blog_mvc');
 define('USER', 'root');
 define('PASSWORD', '');

@@ -1,8 +1,5 @@
 <?php
 ob_start();
-if (!isset($_SESSION["user"]["username"])) {
-    header("/");
-}
 ?>
 
 <h1>Login</h1>
@@ -13,17 +10,17 @@ if (!isset($_SESSION["user"]["username"])) {
             <label for="username">Username :</label>
             <input type="text" name="username" id="username" value="<?= old("username"); ?>">
         </div>
-        <span class="error">
+        <label for="username" class="error">
             <?= error("username"); ?>
-        </span>
+        </label>
         <div>
             <label for="password">Password :</label>
             <input type="password" name="password" id="password" value="<?= old("username"); ?>">
         </div>
-        <span class="error">
+        <label for="password" class="error">
             <?= error("password"); ?>
-        </span>
-        <button type="submit">Login</button>
+        </label>
+        <button type="submit" class="button">Login</button>
     </form>
 </div>
 

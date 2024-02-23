@@ -1,5 +1,5 @@
 // 🔴font-family
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@600;700display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto");
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -67,5 +67,17 @@ h3 {
 }
 %button {
   padding: 0.8rem 1.8rem;
+  border: solid 0.1rem;
+}
+.button {
+  background-color: $primary;
+  @extend %button;
   border-radius: 3rem;
+  &:hover {
+    background-color: darken-color($primary, 10%);
+  }
+}
+.error {
+  font-weight: bold;
+  color: $error;
 }

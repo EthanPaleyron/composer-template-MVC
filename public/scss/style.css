@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@600;700display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto");
 * {
   color: inherit;
   margin: 0;
@@ -83,12 +83,6 @@ button {
   cursor: pointer;
 }
 
-.error_404 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .title_page {
   position: absolute;
   top: 50%;
@@ -133,8 +127,32 @@ h3 {
     font-size: 2.6rem;
   }
 }
+.link {
+  color: #0074d9;
+}
+
+.button {
+  padding: 0.8rem 1.8rem;
+  border: solid 0.1rem;
+}
+
+.button {
+  background-color: #dedede;
+  border-radius: 3rem;
+}
+.button:hover {
+  background-color: #c5c5c5;
+}
+
+.error {
+  font-weight: bold;
+  color: #ff4136;
+}
+
 .error_404 {
   text-align: center;
+  display: flex;
+  justify-content: center;
   flex-direction: column;
 }
 .error_404 h1 {
