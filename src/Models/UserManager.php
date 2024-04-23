@@ -3,21 +3,11 @@ namespace Project\Models;
 
 use Project\Models\User;
 
-class UserManager
+class UserManager extends Manager
 {
-    private \PDO $bdd;
-    public function __construct()
+    public function find($username) // get user by name
     {
-        $this->bdd = new \PDO('mysql:host=' . HOST . ';dbname=' . DATABASE . ';charset=utf8;', USER, PASSWORD);
-        $this->bdd->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
-    }
-    public function getBdd(): \PDO
-    {
-        return $this->bdd;
-    }
-    public function find($username): User|bool
-    {
-        $stmt = $this->bdd->prepare("SELECT * FROM users WHERE username = ?");
+        $stmt = $this->bdd->prepare("SELECT * FROM user WHERE username = ?");
         $stmt->execute(
             array(
                 $username
@@ -26,14 +16,9 @@ class UserManager
         $stmt->setFetchMode(\PDO::FETCH_CLASS, "Project\Models\User");
         return $stmt->fetch();
     }
-    public function getAll(): array|bool
+    public function store($password): void // add new user
     {
-        $stmt = $this->bdd->query('SELECT * FROM users');
-        return $stmt->fetchAll(\PDO::FETCH_CLASS, "Project\Models\User");
-    }
-    public function store($password): void
-    {
-        $stmt = $this->bdd->prepare("INSERT INTO users (username, password) VALUES (?, ?)");
+        $stmt = $this->bdd->prepare("INSERT INTO user (username, password) VALUES (?, ?)");
         $stmt->execute(
             array(
                 $_POST["username"],

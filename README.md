@@ -1,62 +1,44 @@
-# How this repository works
+# Name Project
 
-**Prerequisites** : PHP basis, POO (object-oriented), MVC (Model-View-Controller), the validation
+<!-- ## Problems -->
 
-## Install Composer
+## Use of [MVC model](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller), [Composer](https://getcomposer.org) and [SASS](https://sass-lang.com/).
 
-- **[WampServeur](https://sourceforge.net/projects/wampserver/)**
-- **[Composer](https://getcomposer.org/download/)**
+## Project Installation
 
-## Composer and autoloading
+- Install the following software to proceed with the project installation:
 
-- Initialize the folder as a compose project
+  - **[WampServer](https://sourceforge.net/projects/wampserver/)**
+  - **[Composer](https://getcomposer.org/download/)**
 
-```shell
-composer init  # create file composer.json
-composer install # install l'autoloader
-```
+## Importing the Database into phpMyAdmin
 
-- Fill the composer file with the autoloading rule
+- Launch **WampServer**.
+- From the hidden applications, click on **WampServer**, then on **phpMyAdmin**.
+- Create a database named **`gestion_hotel`** in **phpMyAdmin**.
+- Import the **SQL** file located in the **DB** folder, named **`gestion_hotel.sql`**, into the **gestion_hotel** database.
 
-```json
-"autoload": {
-    "psr-4": {
-        "Project\\": "src/"
-    }
-}
-```
+### Composer Installation
 
-- In the `config.php` add the name of your DB
-
-```php
-define("SRC", '../src/');
-define("CONTROLLERS", '../src/Controllers/');
-define("MODELS", '../src/Models/');
-define("VIEWS", '../src/Views/');
-
-define('HOST', '127.0.0.1');
-define('DATABASE', 'NAME_DB'); // the name of your DB
-define('USER', 'root');
-define('PASSWORD', '');
-```
-
-- Reset autoloader
+- Generate the **Composer** autoloader:
 
 ```shell
 composer dump-autoload
 ```
 
-- Run php -S localhost:8000 in the public folder
+### Lancement du projet
+
+- Start WampServer if not already running to have the **`phpMyAdmin`** database.
+
+- Navigate to the **`public`** folder via the terminal:
 
 ```shell
 cd .\public\
 ```
 
-```shell
-php -S localhost:8000
-```
+- Launch a local server in the public folder:
 
-## SASS | SCSS
+## Installing live-sass for SCSS
 
 - Install the **[live-sass]("https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass")** extension on **vscode**
 - And click on `watch sass`

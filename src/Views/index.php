@@ -2,7 +2,7 @@
 ob_start();
 ?>
 
-<h1 class="title_page">Hello World</h1>
+<h1>Hello World</h1>
 
 <?php
 $content = ob_get_clean();

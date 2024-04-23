@@ -6,19 +6,24 @@ ob_start();
 
 <div class="form_p">
     <form action="/register/" method="post" enctype="multipart/form-data">
-        <label for="username">Your username :</label>
-        <input type="text" name="username" id="username">
-        <label for="username" class="error">
-            <?= error("username"); ?>
-        </label>
-        <label for="password">Your password :</label>
-        <input type="password" name="password" id="password">
-        <label for="password" class="error">
-            <?= error("password"); ?>
-        </label>
-        <label for="passwordConfirm">Password confirm :</label>
-        <input id="passwordConfirm" type="password" name="passwordConfirm"
-            value="<?php echo old("passwordConfirm"); ?>">
+        <div>
+            <label for="username">Your username :</label>
+            <input type="text" name="username" id="username" value="<?= old("username"); ?>">
+            <label for="username" class="error">
+                <?= error("username"); ?>
+            </label>
+        </div>
+        <div>
+            <label for="password">Your password :</label>
+            <input type="password" name="password" id="password" value="<?= old("password"); ?>">
+            <label for="password" class="error">
+                <?= error("password"); ?>
+            </label>
+        </div>
+        <div>
+            <label for="passwordConfirm">Password confirm :</label>
+            <input id="passwordConfirm" type="password" name="passwordConfirm" value="<?= old("passwordConfirm"); ?>">
+        </div>
         <button type="submit" class="button">Sign in</button>
     </form>
 </div>

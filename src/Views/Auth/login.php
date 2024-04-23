@@ -9,18 +9,21 @@ ob_start();
         <div>
             <label for="username">Username :</label>
             <input type="text" name="username" id="username" value="<?= old("username"); ?>">
+            <label for="username" class="error">
+                <?= error("username"); ?>
+            </label>
         </div>
-        <label for="username" class="error">
-            <?= error("username"); ?>
-        </label>
         <div>
             <label for="password">Password :</label>
-            <input type="password" name="password" id="password" value="<?= old("username"); ?>">
+            <input type="password" name="password" id="password" value="<?= old("password"); ?>">
+            <label for="password" class="error">
+                <?= error("password"); ?>
+            </label>
         </div>
-        <label for="password" class="error">
-            <?= error("password"); ?>
-        </label>
         <button type="submit" class="button">Login</button>
+        <label for="username" class="error">
+            <?= error("message"); ?>
+        </label>
     </form>
 </div>
 

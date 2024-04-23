@@ -10,7 +10,7 @@ body {
   flex-direction: column;
 }
 
-.title_page {
+h1 {
   @extend %absolute-center;
   background: gradient(red, blue, 90deg);
   -webkit-background-clip: text;
