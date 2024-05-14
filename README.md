@@ -38,6 +38,10 @@ cd .\public\
 
 - Launch a local server in the public folder:
 
+```shell
+php -S localhost:8000
+```
+
 ## Installing live-sass for SCSS
 
 - Install the **[live-sass]("https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass")** extension on **vscode**
