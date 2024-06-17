@@ -14,7 +14,7 @@
 ## Importing the Database into phpMyAdmin
 
 - Launch **WampServer**.
-- From the hidden applications, click on **WampServer**, then on **phpMyAdmin**.
+- From the hidden applications menu, click on **WampServer**, then on **phpMyAdmin**.
 - Create a database named **`gestion_hotel`** in **phpMyAdmin**.
 - Import the **SQL** file located in the **DB** folder, named **`gestion_hotel.sql`**, into the **gestion_hotel** database.
 
@@ -26,23 +26,17 @@
 composer dump-autoload
 ```
 
-### Lancement du projet
+### Launching the Project
 
-- Start WampServer if not already running to have the **`phpMyAdmin`** database.
-
-- Navigate to the **`public`** folder via the terminal:
-
-```shell
-cd .\public\
-```
+- Start WampServer if it is not already running to have access to the phpMyAdmin database.
 
 - Launch a local server in the public folder:
 
 ```shell
-php -S localhost:8000
+php -S localhost:8000 -t ./public/
 ```
 
 ## Installing live-sass for SCSS
 
 - Install the **[live-sass]("https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass")** extension on **vscode**
-- And click on `watch sass`
+- And click on `Watch Sass`
