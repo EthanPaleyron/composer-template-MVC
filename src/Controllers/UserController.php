@@ -10,7 +10,7 @@ class UserController extends Controller
             "password" => ["required", "min:8", "alphaNum", "confirm"]
         ]);
         $_SESSION['old'] = $_POST;
-        if (!$this->validator->errors()) { // if the validator is not incorect
+        if (!$this->validator->errors()) { // if the validator is not incorrect
             $result = $this->userManager->find($_POST["username"]);
             if (empty($result)) { // if the username already exists in the DB
                 // hash the password so you don't see the real password in the database
@@ -38,9 +38,9 @@ class UserController extends Controller
             "password" => ["required", "min:8", "alphaNum"]
         ]);
         $_SESSION['old'] = $_POST;
-        if (!$this->validator->errors()) { // if the validator is not incorect
+        if (!$this->validator->errors()) { // if the validator is not incorrect
             $result = $this->userManager->find($_POST["username"]);
-            if ($result && password_verify($_POST['password'], $result->getpassword())) { // Si l'username existe deja en BDD et que le password corespond au password enregistrer en BDD de l'user
+            if ($result && password_verify($_POST['password'], $result->getpassword())) { // If the username already exists in the DB and the password matches the password registered in the user's DB
                 // add in session the information retrieved from the database
                 $_SESSION["user"] = [
                     "id" => $result->getid_user(),
