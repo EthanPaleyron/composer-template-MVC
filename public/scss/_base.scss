@@ -1,69 +1,115 @@
-* {
-  color: inherit;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  background-repeat: no-repeat;
+// default texts styles
+h1 {
+  font-size: $font-xl;
+  font-weight: 700;
 }
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
+
+h2 {
+  font-size: $font-l;
+  font-weight: 600;
 }
-img {
-  object-fit: cover;
-  max-width: 100%;
-  user-drag: none;
-  -webkit-user-drag: none;
+
+h3 {
+  font-size: $font-m;
+  font-weight: 600;
 }
-ul,
-ol {
-  list-style: none;
+
+h4 {
+  font-size: $font-s;
+  font-weight: 600;
 }
-blockquote,
-q {
-  quotes: none;
+
+h5 {
+  font-size: $font-xs;
+  font-weight: 600;
 }
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
+
+h6 {
+  font-size: $font-xs;
+  font-weight: 600;
 }
+
+@include responsive(768px) {
+  h1 {
+    font-size: $font-xl + $font-xl-responsive;
+  }
+  h2 {
+    font-size: $font-l + $font-l-responsive;
+  }
+  h3 {
+    font-size: $font-m + $font-m-responsive;
+  }
+  h4 {
+    font-size: $font-s + $font-s-responsive;
+  }
+  h5 {
+    font-size: $font-xs + $font-xs-responsive;
+  }
+  h6 {
+    font-size: $font-xs + $font-xs-responsive;
+  }
+}
+
+@include responsive(1040px) {
+  h1 {
+    font-size: $font-xl + ($font-xl-responsive * 2);
+  }
+  h2 {
+    font-size: $font-l + ($font-l-responsive * 2);
+  }
+  h3 {
+    font-size: $font-m + ($font-m-responsive * 2);
+  }
+  h4 {
+    font-size: $font-s + ($font-s-responsive * 2);
+  }
+  h5 {
+    font-size: $font-xs + ($font-xs-responsive * 2);
+  }
+  h6 {
+    font-size: $font-xs + ($font-xs-responsive * 2);
+  }
+}
+
+// default link styles
 a {
-  text-decoration: none;
-  display: inline-block;
+  color: $link;
+  &:hover {
+    text-decoration: underline;
+  }
 }
-button {
-  border: none;
-  background-color: inherit;
+
+// default table styles
+table {
+  th,
+  td {
+    padding: 0.7rem;
+    border: 1px solid $g;
+  }
 }
-table,
-thead,
-tr,
-th,
-td {
-  border: solid;
-  border-collapse: collapse;
+
+// default button styles
+button,
+input[type="submit"],
+input[type="button"] {
+  padding: 0.5rem 0.7rem;
+  background-color: $g;
+  border-radius: $border-radius;
 }
+
+// default champs styles
+input[type="text"],
+input[type="tel"],
+input[type="password"],
+input[type="search"],
+input[type="url"],
+input[type="(number)"],
+input[type="email"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
 textarea {
-  resize: none;
-}
-input:focus,
-textarea:focus {
-  outline: none;
-}
-a,
-button {
-  user-select: none;
-  cursor: pointer;
+  border-radius: $border-radius;
+  padding: 0.5rem;
+  border: $border-xs solid $g;
 }

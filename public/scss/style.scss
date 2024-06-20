@@ -1,22 +1,20 @@
+@import "reset";
+@import "breakpoints";
+@import "variables";
+@import "components";
 @import "base";
-@import "styles";
-@import "design-tokens";
-@import "404";
 @import "layout";
 
-body {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
+// Pages
+@import "main";
+@import "404";
 
 h1 {
-  @extend %absolute-center;
-  background: gradient(red, blue, 90deg);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  background: linear-gradient(90deg, red, blue);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-footer {
-  flex: 1;
 }

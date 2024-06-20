@@ -1,0 +1,30 @@
+// Buttons
+%buttons {
+  padding: 0.8rem 1.8rem;
+  border: solid 0.1rem;
+}
+.button {
+  background-color: $primary;
+  @extend %buttons;
+  border-radius: 3rem;
+  &:hover {
+    background-color: darken-color($primary, 10%);
+  }
+}
+
+// Links
+%links {
+  color: $link;
+}
+.link {
+  @extend %links;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// Error
+.error {
+  color: $error;
+  font-weight: bold;
+}

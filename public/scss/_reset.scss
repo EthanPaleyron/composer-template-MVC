@@ -1,0 +1,233 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  background-repeat: no-repeat;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1.15; // Improve text rendering
+  -webkit-text-size-adjust: 100%; // Prevent font size adjustments after orientation changes in iOS
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  line-height: 1.5;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  flex: 1;
+}
+
+main {
+  display: block; // Allow usage of HTML5 main element
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+hr {
+  box-sizing: content-box; // Set correct box-sizing for hr
+  height: 0; // Remove default height
+  overflow: visible; // Show the overflow
+}
+
+pre {
+  font-family: monospace, monospace; // Make pre text inherit the font family
+  font-size: 1em; // Reset font size
+}
+
+a {
+  text-decoration: none;
+  color: inherit; // Inherit color from parent
+  background-color: transparent; // Remove background color
+}
+
+abbr[title] {
+  border-bottom: none; // Remove default border bottom
+  text-decoration: underline dotted; // Add dotted underline
+}
+
+b,
+strong {
+  font-weight: bolder; // Enhance readability
+}
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; // Use monospace font for these elements
+  font-size: 1em; // Set consistent font size
+}
+
+small {
+  font-size: 80%; // Adjust small font size
+}
+
+sub,
+sup {
+  font-size: 75%; // Adjust subscript and superscript font size
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em; // Position subscript
+}
+
+sup {
+  top: -0.5em; // Position superscript
+}
+
+img {
+  border-style: none; // Remove default border
+  max-width: 100%;
+  height: auto;
+  display: block;
+  user-drag: none;
+  -webkit-user-drag: none;
+  object-fit: cover;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font: inherit; // Inherit font styles
+  margin: 0; // Remove margin
+}
+
+button {
+  border: none; // Remove default border
+  background-color: transparent; // Remove default background
+  cursor: pointer; // Add pointer cursor
+  user-select: none;
+}
+
+button,
+summary {
+  cursor: pointer; // Make clickable elements have pointer cursor
+}
+
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none; // Remove default focus outline
+}
+
+button,
+input,
+select,
+textarea {
+  appearance: none; // Remove default styles
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+textarea {
+  resize: none; // Prevent resizing
+}
+
+fieldset {
+  border: 1px solid #ccc; // Set default border
+  margin: 0;
+  padding: 0.35em 0.75em 0.625em;
+}
+
+legend {
+  box-sizing: border-box; // Set correct box-sizing
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+
+progress {
+  vertical-align: baseline; // Align progress element
+}
+
+[hidden] {
+  display: none; // Hide hidden elements
+}
+
+ul,
+ol {
+  list-style: none; // Remove default list styles
+  margin: 0;
+  padding: 0;
+}
+
+blockquote,
+q {
+  quotes: none; // Remove default quotes
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+}
+
+table {
+  border-collapse: collapse; // Collapse borders
+  border-spacing: 0; // Remove spacing
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+td,
+th {
+  padding: 0; // Remove padding
+  text-align: left;
+  border: 1px solid #ccc; // Add default border
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block; // Ensure block display for these elements
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  display: inline-block; // Ensure inline-block display
+  vertical-align: middle; // Align vertically
+}
+
+audio:not([controls]) {
+  display: none; // Hide audio elements without controls
+  height: 0;
+}
+
+template {
+  display: none; // Hide template elements
+}
