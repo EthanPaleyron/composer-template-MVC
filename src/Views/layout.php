@@ -17,13 +17,13 @@
 <body>
     <header>
         <nav>
-            <?php if (!isset($_SESSION["user"]["username"])) { ?>
+            <?php if (!isset($_SESSION["user"]["username"])) { // if the user is not logged in ?>
                 <ul>
                     <li><a href="/">Home</a></li>
                     <li><a href="/register/">Sign in</a></li>
                     <li><a href="/login/">Login</a></li>
                 </ul>
-            <?php } else { ?>
+            <?php } else { // if the user is connected ?>
                 <ul>
                     <li><a href="/">Home</a></li>
                     <li><a href="/logout/">Logout</a></li>
@@ -37,7 +37,6 @@
     <main>
         <?php echo $content; ?>
     </main>
-    <script type="module" src="/js/main.js"></script>
 </body>
 
 </html>
